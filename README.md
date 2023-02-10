@@ -27,7 +27,7 @@ $ npm test
 ```
 
 ## Local Development
-User Nodemon to run the server locally
+Use Nodemon to run the server locally
 
 ```bash
 $ nodemon index.js
