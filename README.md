@@ -6,13 +6,13 @@
 
 ### Installation
 
-```bash
+```pwsh
 $ npm install
 ```
 
 ### Usage
 
-```bash
+```pwsh
 
 $ npm start
 
@@ -20,7 +20,7 @@ $ npm start
 
 ## Test
 
-```bash
+```pwsh
 
 $ npm test
 
