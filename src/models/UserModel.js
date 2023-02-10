@@ -32,6 +32,12 @@ const User = db.define('user', {
             len: [8, 255],
         },
     },
+    image: {
+        type: DataTypes.STRING,
+    },
+    url: {
+        type: DataTypes.STRING,
+    },
     role: {
         type: DataTypes.STRING,
         allowNull: false,

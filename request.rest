@@ -1,6 +1,6 @@
 // Get all users
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlJvaG1hbiBCZW55IFJpeWFudG8iLCJ1c2VybmFtZSI6InJvaG1hbmJlbnkiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NTcxODEzMiwiZXhwIjoxNjc1NzE4MTQ3fQ.KbIW3Ehg6nofM1jc6RqU-E2WlYkguo5MHOSHf_eZWgU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlJvaG1hbiBCZW55IFJpeWFudG8iLCJ1c2VybmFtZSI6InJvaG1hbmJlbnkiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NTgwMjYxMSwiZXhwIjoxNjc1ODAyOTExfQ.LgDgATi-vwLR-FH-kCdp6oZicbuK9zaFvAQw3MM48Uo
 
 ###
 // Register a new user
@@ -11,8 +11,8 @@ Content-Type: application/json
     "name": "John Doe",
     "username": "john",
     "email": "john@gmail.com",
-    "password": "12345678",
-    "password_confirmation": "12345678"
+    "password": "User123*",
+    "password_confirmation": "User123*"
 }
 
 ###
@@ -73,9 +73,15 @@ GET http://localhost:5000/user/refreshtoken
 
 ###
 // Logout
-DELETE http://localhost:5000/user/logout
+DELETE http://localhost:5000/users/logout
 
 ###
 // Get a user
 GET http://localhost:5000/users/current
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlJvaG1hbiBCZW55IFJpeWFudG8iLCJ1c2VybmFtZSI6InJvaG1hbmJlbnkiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NTcxOTA0NSwiZXhwIjoxNjc1NzE5MzQ1fQ.liahwvZaPFiZxANScNwU1i5Z-dOgD3aY6Z9TQAq_0pw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlJvaG1hbiBCZW55IFJpeWFudG8iLCJ1c2VybmFtZSI6InJvaG1hbmJlbnkiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NjAxNDgzMCwiZXhwIjoxNjc2MDE1MTMwfQ.t6XHyVNipIy-sYVy52fIcP6EfJjH6aTWhnYcy6wD3PA
+
+
+###
+// Aploud File
+GET http://localhost:5000/user/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlJvaG1hbiBCZW55IFJpeWFudG8iLCJ1c2VybmFtZSI6InJvaG1hbmJlbnkiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3NTgwMjYxMSwiZXhwIjoxNjc1ODAyOTExfQ.LgDgATi-vwLR-FH-kCdp6oZicbuK9zaFvAQw3MM48Uo

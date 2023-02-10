@@ -27,17 +27,6 @@ export const refreshToken = async (req, res) => {
                 { expiresIn: "5m" }
             );
 
-            // UserModel.update(
-            //     { refreshToken: accessToken },
-            //     { where: { id: user.id } }
-            // );
-
-            // res.cookie('refreshToken', refreshToken, {
-            //     httpOnly: true,
-            //     maxAge: 24 * 60 * 60 * 1000
-            // });
-
-
             res.status(200).json(response200("OK", { accessToken }));
         });
     } catch (error) {
