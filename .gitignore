@@ -129,4 +129,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+#remove package-lock.json
+package-lock.json
+
+
+# Logs
 request.rest
