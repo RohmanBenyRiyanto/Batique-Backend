@@ -6,13 +6,13 @@
 
 ### Installation
 
-```pwsh
+```bash
 $ npm install
 ```
 
 ### Usage
 
-```pwsh
+```bash
 
 $ npm start
 
@@ -20,10 +20,17 @@ $ npm start
 
 ## Test
 
-```pwsh
+```bash
 
 $ npm test
 
+```
+
+## Local Development
+User Nodemon to run the server locally
+
+```bash
+$ nodemon index.js
 ```
 
 ## License
