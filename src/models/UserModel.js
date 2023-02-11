@@ -18,6 +18,9 @@ const User = db.define('user', {
             this.setDataValue('username', val.toLowerCase());
         },
     },
+    bio: {
+        type: DataTypes.STRING,
+    },
     email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -49,8 +52,25 @@ const User = db.define('user', {
             isIn: [['user', 'admin', 'superadmin', 'toko']],
         },
     },
+    jenisKelamin: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    tanggalLahir: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
+    noTlp: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
     refreshToken: {
         type: DataTypes.TEXT,
+    },
+    isVerified: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
     },
 }, {
     freezeTableName: true,

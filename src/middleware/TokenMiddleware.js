@@ -2,7 +2,6 @@ import jwt from "jsonwebtoken";
 import {
     response401,
     response403,
-
 } from "../utils/Response.js";
 
 export const verifyToken = (req, res, next) => {

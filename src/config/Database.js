@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
 
-const db = new Sequelize('auth_jwt', 'root', '', {
+const db = new Sequelize('batique', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
 });

@@ -81,6 +81,16 @@ export function response409(message) {
     };
 }
 
+export function response422(message) {
+    return {
+        meta: {
+            status: 422,
+            success: false,
+            message: message || "Unprocessable Entity"
+        }
+    };
+}
+
 export function response500(message) {
     return {
         meta: {

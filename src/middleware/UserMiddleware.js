@@ -110,3 +110,25 @@ export const verifyToko = async (req, res, next) => {
         return res.status(401).json(response401("You are not authenticated"));
     }
 };
+
+// Validation isAccountActive
+export const verifyAccountActive = async (req, res, next) => {
+    const authHeader = req.headers.authorization;
+    if (authHeader) {
+        const token = authHeader.split(" ")[1];
+        verify(token, process.env.ACCESS_TOKEN_SECRET, async (err, user) => {
+            if (err) {
+                return res.status(403).json(response403("Token is not valid"));
+            }
+            const userFound = await UserModel.findOne({ where: { id: user.id } });
+            if (userFound.isAccountActive === true) {
+                req.user = user;
+                next();
+            } else {
+                return res.status(403).json(response403("You are not authorized"));
+            }
+        });
+    } else {
+        return res.status(401).json(response401("You account is not verified"));
+    }
+}
